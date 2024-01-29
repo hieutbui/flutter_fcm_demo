@@ -1,6 +1,6 @@
 # flutter_fcm_demo
 
-A new Flutter project for FCM configuration demo.
+A Flutter project for FCM configuration demo.
 
 ## Configuration steps
 
@@ -183,4 +183,8 @@ A new Flutter project for FCM configuration demo.
   ```
 
 #### Demo
+
+
+https://github.com/hieutbui/flutter_fcm_demo/assets/80142234/f123d98d-1530-4cc5-b0e0-8b536cd92999
+
 
