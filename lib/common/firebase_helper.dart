@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_fcm_demo/common/notification_helper.dart';
 import 'package:flutter_fcm_demo/firebase_options.dart';
+import 'dart:io';
 
 class FirebaseHelper {
   static String fcmToken = "";
@@ -11,13 +12,24 @@ class FirebaseHelper {
       options: DefaultFirebaseOptions.currentPlatform
     );
 
-    NotificationHelper.initialized();
+    if (Platform.isAndroid) {
+      NotificationHelper.initialized();
+    } else if (Platform.isIOS) {
+      FirebaseMessaging.instance.requestPermission(
+        alert: true,
+        announcement: false,
+        badge: true,
+        carPlay: false,
+        criticalAlert: false,
+        provisional: false,
+        sound: true
+      );
+    }
 
     FirebaseMessaging.onBackgroundMessage(backgroundHandler);
 
     await getDeviceTokenToSenNotification();
 
-    // App terminated & user click notification
     FirebaseMessaging.instance.getInitialMessage().then((value) {
       print('FirebaseMessaging.instance.getInitialMessage()');
 
