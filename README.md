@@ -176,7 +176,7 @@ A Flutter project for FCM configuration demo.
         "android_channel_id": "channel_id",
         "sound": true
     },
-    "date": {
+    "data": {
         "_id": 1
     }
   }
@@ -185,6 +185,6 @@ A Flutter project for FCM configuration demo.
 #### Demo
 
 
-https://github.com/hieutbui/flutter_fcm_demo/assets/80142234/f123d98d-1530-4cc5-b0e0-8b536cd92999
+https://github.com/hieutbui/flutter_fcm_demo/assets/80142234/c1085cfc-01b9-4d3d-8e11-75b0123e4c0f
 
 
