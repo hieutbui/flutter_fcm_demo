@@ -94,7 +94,7 @@ A Flutter project for FCM configuration demo.
       print(message.notification?.title ?? "");
     }
    ```
-7. Create a class for notification handling'
+7. Create a class for notification handling
   ```dart
   class NotificationHelper {
     // Create instance of flutter_local_notification
